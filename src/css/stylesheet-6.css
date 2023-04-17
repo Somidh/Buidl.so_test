@@ -1,0 +1,691 @@
+@import "/src/css/stylesheet-5.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:active,
+a:hover {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  outline: none;
+}
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* Navbar Start here */
+
+.nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+#navbar {
+  width: 100%;
+  background-color: white;
+}
+
+.navbar {
+  transform: translateX(-250%);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  width: 70%;
+  height: 100vh;
+  max-width: 30em;
+  padding: 0 1.5em;
+  align-items: flex-start;
+  background-color: white;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+.navbar.show-sidebar {
+  transform: translateX(0);
+}
+.fa-xmark{
+  display:none;
+}
+.navbar.show-sidebar .fa-xmark {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 24px;
+  cursor: pointer;
+  font-size: var(--font-size-m) 
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+  padding: 0 1em;
+}
+.navbar-nav li a {
+  font-size: var(--font-size-m);
+}
+.sidebar-header {
+  position: relative;
+  width: 100%;
+}
+
+.fa-bars {
+  display: block;
+  font-size: var(--font-size-m);
+  cursor: pointer;
+}
+
+.fa-plus {
+  font-size: var(--font-size-s);
+  border: 1px solid black;
+  padding: 1px 2px;
+}
+.account-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  padding: 0 1em;
+}
+.account-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--font-size-l);
+  cursor: pointer;
+}
+.fa-caret-down {
+  font-size: 20px;
+  transform: rotate(-90deg);
+}
+.dropdown {
+  width: 9em;
+  display: none;
+  background-color: white;
+  position: absolute;
+  left: 12em;
+  padding: 16px 0px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.dropdown ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dropdown ul li {
+  cursor: pointer;
+}
+.account-container.active .dropdown {
+  display: block;
+}
+.apply {
+  font-size: var(--font-size-l);
+}
+
+/* Navbar ends here */
+
+/* Hero starts here */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 4em 0;
+  gap: 5em;
+  width: 100%;
+}
+.hero-img {
+  z-index: -10;
+}
+.hero-img img {
+  width: 100%;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 570px;
+  display: flex;
+  flex-direction: column;
+}
+.coindcx-funding {
+  width: 100%;
+  height: 140px;
+  background-color: #162c52;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 2em;
+}
+.coindcx-funding img {
+  width: 5em;
+}
+.funding {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  color: white;
+}
+.funding-price {
+  font-weight: 500;
+  margin: 0;
+}
+.funding-text {
+  color: #f5f4f4;
+}
+.belief {
+  background-image: linear-gradient(to right, #dfd3ee, #f4b5b8);
+  width: 100%;
+  height: 140px;
+  padding: 2em;
+}
+.belief-content {
+  text-align: start;
+}
+.belief-logo {
+  margin-bottom: 12px;
+  font-size: var(--font-size-l);
+}
+.belief-text {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.belief-price {
+  font-weight: 600;
+}
+
+/* Hero ends here */
+
+/* Pitch starts here */
+
+#pitch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.pitch-heading {
+  font-weight: normal;
+  font-size: var(--font-size-l);
+}
+.pitch-coindcx-img {
+  width: 10em;
+  margin-bottom: 16px;
+}
+.pitch-text {
+  line-height: 1.5em;
+  font-size: var(--font-size-s);
+  text-align: center;
+}
+.date {
+  font-weight: 600;
+  font-size: var(--font-size-xs);
+}
+.fa-calendar {
+  color: #999999;
+}
+.apply-btn {
+  background-color: #407bff;
+  color: white;
+  padding: 8px 56px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Pitch ends here */
+
+/* Prize starts here */
+
+#prize {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4em 0;
+}
+.prize-coindcx {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.prize-coindcx-img {
+  width: 10em;
+}
+.prize-coindcx-text {
+  color: #999999;
+  text-align: center;
+  font-size: var(--font-size-s);
+}
+.prize-coindcx-amount {
+  font-weight: 600;
+  font-size: calc(var(--font-size-large-heading) - 8px);
+}
+.prize-funding {
+  color: #999999;
+}
+.prize-upto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.upto {
+  color: #999999;
+  font-size: var(--font-size-m);
+}
+.upto-amount {
+  font-size: calc(var(--font-size-large-heading) - 8px);
+  font-weight: 600;
+}
+.upto-text {
+  color: #999999;
+  text-align: center;
+  width: 20em;
+}
+
+.prize-line {
+  width: 90%;
+  height: 2px;
+  background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 49%, rgba(255,255,255,1) 100%);
+  margin: 3em auto;
+}
+
+/* Prize ends here */
+
+/* Mentors starts here */
+#mentors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+.mentors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 5em auto;
+  gap: 5em;
+}
+.mentor-profile {
+  width: 250px;
+  height: 250px;
+  text-align: center;
+}
+.mentor-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+/* Mentors ends here */
+
+/* Faqs start here */
+
+#faqs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5em auto;
+  width: 100%;
+  gap: 2em;
+}
+.faq {
+  width: 100%;
+  max-width: 55em;
+}
+.faqs-heading {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--margin-xl);
+  font-weight: 600;
+  text-align: center;
+}
+.faqs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.question-answer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 45em;
+}
+.question-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1em;
+}
+.question-container.active .faq-toggle {
+  transform: rotate(180deg);
+}
+.question-container.active .answer {
+  display: block;
+}
+.question {
+  font-size: var(--font-size-m);
+  font-weight: 600;
+  margin: 0;
+}
+.answer {
+  margin-top: 12px;
+  display: none;
+}
+.faqs-line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #b8adad;
+  margin: 2em 0;
+}
+.fa-angle-down {
+  font-size: var(--font-size-l);
+  cursor: pointer;
+}
+.region-footer{
+  padding: 0 4em;
+}
+
+/* Faqs ends here */
+
+@media screen and (min-width: 720px) {
+  
+  .nav-header {
+    display: none;
+  }
+
+  .navbar {
+    transform: translateX(0);
+    padding: 2em 1em;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    max-width: none;
+    box-shadow: none;
+  }
+  .navbar-nav {
+    flex-direction: row;
+    align-items: center;
+  }
+  .navbar-nav li a {
+    font-size: var(--font-size-s);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sidebar-header{
+    width: auto;
+  }
+  .account-container {
+    flex-direction: row;
+  }
+  .account-dropdown,
+  .fa-caret-down,
+  .apply {
+    font-size: var(--font-size-s);
+  }
+
+  .fa-caret-down {
+    transform: rotate(0);
+  }
+  .dropdown {
+    left: 2.5em;
+    top: 3em;
+  }
+  .fa-xmark {
+    display: none;
+  }
+  .fa-plus {
+    font-size: var(--font-size-xs);
+  }
+.hero{
+  margin-top: 15em;
+
+}
+  .hero-content {
+    flex-direction: row;
+    width: 100%;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-img{
+    margin: 0 auto;
+    max-width: 70%;
+  }
+  
+  .coindcx-funding {
+    width: 100%;
+    max-width: 593px;
+    margin-left: auto;
+  }
+  .belief {
+    width: 100%;
+    max-width: 593px;
+    margin-right: auto;
+  }
+  #pitch {
+    align-items: flex-start;
+  }
+  .pitch-text {
+    max-width: 45em;
+    text-align: start;
+  }
+  #prize {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .prize-coindcx {
+    width: 100%;
+  }
+  .prize-upto {
+    width: 100%;
+  }
+  .prize-coindcx-text {
+    width: 15em;
+  }
+  .prize-line {
+    width: 5px;
+    height: 15em;
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 49%, rgba(255,255,255,1) 100%);
+  }
+ 
+  .question-answer {
+    margin-left: 1em;
+  }
+  .question-container {
+    gap: 3em;
+  }
+  #footer {
+    margin-top: 4em;
+    padding: 2em 0;
+    border-top: 1px solid #e2dbdb;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar-nav {
+    gap: 4em;
+  }
+  .navbar-nav li a {
+    font-size: var(--font-size-m);
+  }
+  .fa-plus {
+    font-size: var(--font-size-xs);
+  }
+  .account-dropdown {
+    font-size: var(--font-size-m);
+  }
+  .fa-caret-down {
+    transform: rotate(0);
+    font-size: var(--font-size-m);
+  }
+  .dropdown {
+    left: em;
+    top: 3em;
+  }
+  .apply {
+    font-size: var(--font-size-m);
+  }
+  .coindcx-funding {
+    height: 187px;
+    padding: 2em 5em;
+    gap: 2em;
+  }
+  .coindcx-funding img {
+    width: 7em;
+  }
+  .funding-price {
+    font-size: calc(var(--font-size-large-heading) - 8px);
+  }
+  .funding-text {
+    font-size: var(--font-size-l)
+  }
+  .belief {
+    height: 187px;
+    padding: 2em 4em;
+  }
+  .belief-logo {
+    font-size: var(--font-size-l);
+    margin-bottom: 30px;
+  }
+  .belief-price {
+    font-size: 3.5em;
+  }
+  .belief-text p {
+    font-size: var(--font-size-l)
+  }
+  #pitch {
+    margin-left: 20px;
+  }
+  .pitch-heading {
+    font-size: 24px;
+  }
+  .pitch-coindcx-img {
+    width: 12em;
+  }
+  .pitch-text {
+    font-size: var(--font-size-m)
+  }
+  .apply-btn {
+    padding: 10px 70px;
+    font-size: var(--font-size-s)
+  }
+  .prize-coindcx {
+    gap: 1.5em;
+  }
+  .prize-coindcx-text {
+    font-size: var(--font-size-l);
+    font-weight: 600;
+  }
+  .prize-coindcx-amount {
+    font-size: 5em;
+  }
+  .prize-funding {
+    font-size: var(--font-size-m);
+    font-weight: 600;
+  }
+  .prize-coindcx-img {
+    font-size: var(--font-size-m);
+  }
+  .prize-line {
+    height: 25em;
+  }
+  .prize-upto {
+    gap: 2em;
+  }
+  .upto {
+    font-size: var(--font-size-l);
+    font-weight: 600;
+  }
+  .upto-amount {
+    font-size: 5em;
+  }
+  .upto-text {
+    font-size: var(--font-size-l);
+    font-weight: 600;
+  }
+  .mentors {
+    gap: 6em;
+  }
+  .faqs-heading {
+    font-size: var(--font-size-xxl);
+  }
+  .question-container {
+    gap: 12em;
+  }
+  .faq {
+    width: 100%;
+    max-width: 65em;
+  }
+ 
+  .question-answer {
+    max-width: 50em;
+  }
+  .question {
+    font-size: var(--font-size-l);
+  }
+  .answer {
+    font-size: var(--font-size-m);
+  }
+}
+
+@media screen and (min-width: 1274px) {
+ 
+  .main {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .hero-content {
+    width: 100%;
+  }
+  .funding {
+    width: 100%;
+  }
+  .coindcx-funding,
+  .belief {
+    max-width: 660px;
+  }
+}
